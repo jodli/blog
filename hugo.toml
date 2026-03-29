@@ -1,0 +1,17 @@
+baseURL = 'https://jodli.github.io/blog/'
+languageCode = 'en'
+title = 'Thinking Out Loud'
+
+[params]
+  description = 'Thoughts on software, AI, and everything in between.'
+  author = 'jodli'
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[pagination]
+  pagerSize = 20

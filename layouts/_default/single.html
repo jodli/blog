@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <article>
+    <header class="post-header">
+      <h1>{{ .Title }}</h1>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{ with .Params.updated }}
+        <span class="updated">(updated {{ time.AsTime . | time.Format "January 2, 2006" }})</span>
+      {{ end }}
+    </header>
+    <div class="post-content">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

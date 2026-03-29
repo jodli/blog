@@ -1,0 +1,22 @@
+{{ define "main" }}
+  {{ if .IsHome }}
+    <p class="site-description">{{ .Site.Params.description }}</p>
+  {{ else }}
+    <h1>{{ .Title }}</h1>
+  {{ end }}
+  <div class="post-list">
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}
+      {{ $pages = .Site.RegularPages }}
+    {{ end }}
+    {{ range $pages }}
+      <article class="post-card">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ with .Summary }}
+          <p class="post-summary">{{ . | plainify | truncate 160 }}</p>
+        {{ end }}
+      </article>
+    {{ end }}
+  </div>
+{{ end }}

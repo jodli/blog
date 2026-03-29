@@ -1,0 +1,306 @@
+/* ==========================================================================
+   Blog Theme — Thinking Out Loud
+   Space Grotesk, Swiss-inspired, red accent.
+   ========================================================================== */
+
+/* --- Tokens --- */
+:root {
+  --text: #000000;
+  --text-secondary: #333333;
+  --text-muted: #666666;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --accent: #e63946;
+  --border: #000000;
+  --border-subtle: #e0e0e0;
+  --code-bg: #f0f0ee;
+  --font: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --max-width: 640px;
+}
+
+/* --- Reset --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Base --- */
+body {
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+/* --- Header --- */
+header {
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  background: var(--text);
+  color: var(--surface);
+  transition: background 0.15s ease;
+}
+
+.site-title:hover {
+  background: var(--accent);
+}
+
+.site-description {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* --- Post list --- */
+.post-card {
+  padding: 1.25rem;
+  border-left: 3px solid var(--border-subtle);
+  margin-bottom: 1.5rem;
+  transition: border-color 0.15s ease;
+}
+
+.post-card:hover {
+  border-color: var(--accent);
+}
+
+.post-card time {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.post-card h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.35rem;
+}
+
+.post-card h2 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-card:hover h2 a {
+  color: var(--accent);
+}
+
+.post-summary {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* --- Article --- */
+.post-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid var(--border);
+}
+
+.post-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.post-header time {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-header .updated {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+/* --- Table of Contents --- */
+.toc {
+  margin-bottom: 2.5rem;
+  padding: 1.25rem;
+  background: var(--code-bg);
+  border-left: 3px solid var(--accent);
+}
+
+.toc-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+}
+
+.toc nav,
+.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.toc li {
+  margin-bottom: 0.3rem;
+}
+
+.toc > #TableOfContents > ul > li > ul {
+  padding-left: 1rem;
+  margin-top: 0.3rem;
+}
+
+.toc a {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.toc a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+}
+
+/* --- Post content --- */
+.post-content h2 {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin: 3rem 0 1rem;
+}
+
+.post-content h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.post-content ul, .post-content ol {
+  margin: 0 0 1.2rem 1.5rem;
+  color: var(--text-secondary);
+}
+
+.post-content li {
+  margin-bottom: 0.4rem;
+  padding-left: 0.25rem;
+}
+
+.post-content li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.post-content strong {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.post-content blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  background: var(--code-bg);
+  color: var(--text-secondary);
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.post-content blockquote p {
+  margin-bottom: 0;
+}
+
+.post-content blockquote p + p {
+  margin-top: 0.5rem;
+}
+
+.post-content a {
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 2px solid var(--accent);
+  transition: color 0.15s ease;
+}
+
+.post-content a:hover {
+  color: var(--accent);
+}
+
+/* --- Code --- */
+.post-content code {
+  font-family: 'JetBrains Mono', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.85em;
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 2px;
+}
+
+.post-content pre {
+  background: var(--text);
+  color: #e0e0e0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  line-height: 1.5;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.82em;
+  color: inherit;
+}
+
+/* --- Separator --- */
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--border-subtle);
+  margin: 2.5rem 0;
+}
+
+/* --- Footer --- */
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer p {
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
