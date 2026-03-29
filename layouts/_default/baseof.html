@@ -13,16 +13,19 @@
   {{ end }}
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
-    </nav>
-  </header>
-  <main>
-    {{ block "main" . }}{{ end }}
-  </main>
-  <footer>
-    <p>{{ .Site.Params.author }} &middot; {{ now.Year }}</p>
-  </footer>
+  <div class="page">
+    <header>
+      <nav>
+        <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
+      </nav>
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer>
+      <a href="https://jodli.github.io">jodli</a>
+      <span>{{ now.Year }}</span>
+    </footer>
+  </div>
 </body>
 </html>

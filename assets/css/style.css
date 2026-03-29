@@ -29,43 +29,54 @@ html {
 /* --- Base --- */
 body {
   font-family: var(--font);
-  font-size: 17px;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.6;
   color: var(--text);
   background: var(--bg);
-  max-width: var(--max-width);
+  padding: 2.5rem;
+}
+
+.page {
+  max-width: 850px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3rem;
+  background: var(--surface);
+  border: 3px solid var(--border);
 }
 
 /* --- Header --- */
 header {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 3px solid var(--border);
 }
 
 .site-title {
-  font-size: 0.75rem;
+  font-size: 2rem;
   font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
   color: var(--text);
   text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  display: inline-block;
-  padding: 0.4rem 0.6rem;
-  background: var(--text);
-  color: var(--surface);
-  transition: background 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .site-title:hover {
-  background: var(--accent);
+  color: var(--accent);
+}
+
+.intro {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .site-description {
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 55ch;
 }
 
 /* --- Post list --- */
@@ -91,10 +102,10 @@ header {
 }
 
 .post-card h2 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
 }
 
 .post-card h2 a {
@@ -108,7 +119,7 @@ header {
 
 .post-summary {
   color: var(--text-muted);
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   line-height: 1.5;
   margin: 0;
 }
@@ -205,13 +216,18 @@ header {
 }
 
 .post-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
   margin-bottom: 1.2rem;
   color: var(--text-secondary);
+  max-width: 65ch;
 }
 
 .post-content ul, .post-content ol {
   margin: 0 0 1.2rem 1.5rem;
   color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .post-content li {
@@ -291,16 +307,33 @@ header {
 
 /* --- Footer --- */
 footer {
-  margin-top: 4rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--border-subtle);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--border);
   display: flex;
   justify-content: flex-end;
+  gap: 1.5rem;
 }
 
-footer p {
+footer a, footer span {
   color: var(--text-muted);
-  font-size: 0.65rem;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
+}
+
+footer a {
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.15s ease;
+}
+
+footer a:hover {
+  border-color: var(--accent);
+}
+
+@media (max-width: 700px) {
+  body { padding: 1rem; }
+  .page { padding: 1.5rem; }
 }
