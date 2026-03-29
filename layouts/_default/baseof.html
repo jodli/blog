@@ -11,6 +11,9 @@
   {{ with resources.Get "css/style.css" }}
     <style>{{ .Content | safeCSS }}</style>
   {{ end }}
+  {{ with resources.Get "css/syntax.css" }}
+    <style>{{ .Content | safeCSS }}</style>
+  {{ end }}
 </head>
 <body>
   <div class="page">
