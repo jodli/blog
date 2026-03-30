@@ -8,7 +8,6 @@ pinned: false
 created: 2026-03-29T22:38:52.752293216+00:00
 modified: 2026-03-29T22:42:14.961977360+00:00
 ---
-# I Ran 3 AI Agents in Parallel
 
 I work on a product with a multi-repo setup. Implementing a feature that spans multiple repos means context-switching between them constantly. It's one of those things that's not hard exactly, just... slow.
 
