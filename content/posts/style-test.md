@@ -59,6 +59,10 @@ Ordered:
 3. Das Falsche bauen
 4. Nochmal von vorne
 
+## Image
+
+![A test image](/blog/images/thanks-no-time.png)
+
 ## Mixed content
 
 Here's a paragraph with **bold text**, a [link to something](https://example.com), and some `inline code`. The paragraph should flow naturally and not feel cramped.
