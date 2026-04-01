@@ -322,6 +322,14 @@ header {
   font-size: 0.82em;
 }
 
+/* --- Images --- */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid var(--accent);
+  margin: 1rem 0;
+}
+
 /* --- Separator --- */
 .post-content hr {
   border: none;
