@@ -1,7 +1,7 @@
 ---
 title: "Style Test"
 date: 2026-03-28
-draft: true
+unlisted: true
 ---
 
 A quick test of all content elements against the new design.

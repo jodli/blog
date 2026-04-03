@@ -12,6 +12,7 @@
       {{ $pages = .Site.RegularPages }}
     {{ end }}
     {{ range $pages }}
+      {{ if not .Params.unlisted }}
       <article class="post-card">
         <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
         <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -19,6 +20,7 @@
           <p class="post-summary">{{ . | plainify | truncate 160 }}</p>
         {{ end }}
       </article>
+      {{ end }}
     {{ end }}
   </div>
 {{ end }}
