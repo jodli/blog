@@ -1,7 +1,7 @@
 ---
 title: The Bottleneck Is Not Coding
 date: 2026-03-30
-draft: true
+unlisted: true
 ---
 
 In my [first post](../hello/), I dropped this line: *"Coding was never the bottleneck. Decisions were. Alignment was."* Let me unpack that.
