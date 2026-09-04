@@ -25,7 +25,7 @@ I was the message bus.
 
 It felt absurd. But it worked. Each agent had deep context about its repo. They never stepped on each other's code. And the handoffs created natural API contracts: when I told one agent *"the other side returns this shape,"* it just built against that. No ambiguity.
 
-The problem was obvious though: I was the bottleneck. Every message had to go through me.
+I was the bottleneck, though. Every message had to go through me.
 
 ## Agent Teams
 
@@ -33,7 +33,7 @@ Claude Code has an experimental feature called [Agent Teams](https://code.claude
 
 This was the use case. Sub-agents are fire-and-forget. Agent Teams give you a coordinator that sets up a team, spins up specialized agents, and delegates. The agents can message each other directly, no human relay.
 
-The catch: they're not really persistent either. The team lead spins up agents, they do their work, and when the task list is done, everything shuts down. If you then test the result and come back with "actually, this endpoint should return a list, not an object", the team is gone. You start from scratch with a new team, new agents, no accumulated context. For a single burst of work it's great. For the back-and-forth of real development, it's [limiting](https://github.com/anthropics/claude-code/issues/23669).
+They're not really persistent either. The team lead spins up agents, they do their work, and when the task list is done, everything shuts down. If you then test the result and come back with "actually, this endpoint should return a list, not an object", the team is gone. You start from scratch with a new team, new agents, no accumulated context. For a single burst of work it's great. For the back-and-forth of real development, it's [limiting](https://github.com/anthropics/claude-code/issues/23669).
 
 ## What if
 

@@ -16,11 +16,11 @@ But the old thing is still there too. We can't just switch over: there are custo
 
 We're somewhere around halfway through re-implementing the existing features in the new components. We're modernizing the design along the way, rethinking how things should work, not just copying what was there before. That sounds like progress, and it is. But halfway means the other half is still the old system.
 
-And the finish line keeps moving. Not because anyone is doing anything wrong, but because the product doesn't stop while you modernize it. New requirements come in. The market shifts. The assumptions we started with (who it's for, what matters, what "modern" even means) don't stay fixed for years. By the time we're halfway, we're modernizing toward something that no longer matches where the world has moved.
+And the finish line keeps moving. Not because anyone is doing anything wrong, but because the product doesn't stop while you modernize it. New requirements come in. The market shifts. The assumptions we started with (who it's for, what matters, what "modern" even means) don't stay fixed for years. By the time we're halfway, we're modernizing toward something that no longer matches where the world is.
 
 ## Right now
 
-For a long time there's been this feeling of being "almost done." It never quite resolves. And recently, the conversation shifted again. Not about the technical approach, about the direction itself. Where exactly we're heading, and whether it's still the right place.
+For a long time there's been this feeling of being "almost done." It never quite resolves. And recently, the conversation shifted again, this time to the direction itself rather than the technical approach. Where exactly we're heading, and whether it's still the right place.
 
 Nobody's incompetent. Everyone involved is smart, experienced, and genuinely trying to do the right thing. That's what makes it so frustrating.
 

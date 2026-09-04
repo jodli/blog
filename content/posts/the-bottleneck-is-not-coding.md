@@ -8,11 +8,11 @@ In my [first post](../hello/), I dropped this line: *"Coding was never the bottl
 
 ## The narrative right now
 
-Open any tech blog, any LinkedIn feed, any conference talk. The story is the same: AI is making developers 10x faster. Coding assistants, agentic workflows, automated PRs, vibe coding. The message is clear: writing software is about to get very, very fast. I was at the [Software Architecture Gathering](https://conferences.isaqb.org/software-architecture-gathering/) in Berlin last year, and even there, half the sessions circled back to this.
+Open any tech blog, any LinkedIn feed, any conference talk. The story is the same: AI is making developers 10x faster. Coding assistants, agentic workflows, automated PRs, vibe coding. Writing software is about to get very, very fast. I was at the [Software Architecture Gathering](https://conferences.isaqb.org/software-architecture-gathering/) in Berlin last year, and even there, half the sessions circled back to this.
 
 And it's true. I've had side project ideas sitting in my notes for years, things I never found the time to build. Now I'm actually working through them, one by one. The coding part is genuinely getting faster.
 
-But here's what's been bugging me: we're treating LLMs like they're going to solve all of software development. Engineers will be irrelevant soon, they say. Everyone can build software now. I'm getting tired of it. The ceiling for optimizing the coding part is so low in the overall process of creating a software product, and nobody seems to ask *what happens after you write the code faster.*
+What bugs me is that we're treating LLMs like they're going to solve all of software development. Engineers will be irrelevant soon, they say. Everyone can build software now. I'm getting tired of it. Coding is a small slice of building a software product, so there isn't much ceiling to optimize there, and nobody seems to ask *what happens after you write the code faster.*
 
 ## Where time actually goes
 
@@ -30,11 +30,11 @@ In my experience, it's somewhere between 10% and 20%. The rest is:
 - Coordinating across components that different teams own
 - Deploying, testing in staging, rolling back, trying again
 
-The actual typing-code-into-an-editor part? That was never the slow bit.
+Typing code into an editor was never the slow bit.
 
 ## Theory of Constraints, but nobody reads Goldratt anymore
 
-There's a concept from manufacturing that's been around since the 1980s that I keep coming back to. Eli Goldratt called it the [Theory of Constraints](https://en.wikipedia.org/wiki/Theory_of_constraints): any system's throughput is limited by its single tightest bottleneck. If you optimize something that isn't the bottleneck, the system doesn't get faster. It just piles up more inventory in front of the actual constraint.
+There's a concept from manufacturing, around since the 1980s, that I keep coming back to. Eli Goldratt called it the [Theory of Constraints](https://en.wikipedia.org/wiki/Theory_of_constraints): any system's throughput is limited by its single tightest bottleneck. If you optimize something that isn't the bottleneck, the system doesn't get faster. It just piles up more inventory in front of the actual constraint.
 
 Applied to software: if you 10x the speed of coding but decisions still take three weeks and alignment meetings still happen biweekly, you haven't shipped anything faster. You've just created a pile of code waiting for someone to decide if it should exist.
 
@@ -52,23 +52,23 @@ This is what frustrates me the most. We're not discovering a new problem. I keep
 
 **Domain-driven design.** Organize around business domains, not technical layers. So that one team can own a problem end-to-end without coordinating with five other teams.
 
-These patterns all attack the same bottleneck: the time between "we have an idea" and "we know if it's the right idea." They're not about coding faster. They're about *learning* faster.
+These patterns all attack the same bottleneck: the time between "we have an idea" and "we know if it's the right idea." They're about *learning* faster, not coding faster.
 
 And somehow, in the rush to make AI write code, we're forgetting all of them.
 
 ## What I keep seeing instead
 
-It's not just teams adopting AI tools on their own. It's management rolling them out top-down, expecting results the moment developers get access. The hype creates the impression that delivery will speed up overnight. Laura Tacho calls this ["spray and pray"](https://youtu.be/LOHgRw43fFk): simply buying AI licenses for all developers and hoping for the best. It doesn't work.
+Teams adopt AI tools on their own, and management rolls them out top-down, expecting results the moment developers get access. The hype creates the impression that delivery will speed up overnight. Laura Tacho calls this ["spray and pray"](https://youtu.be/LOHgRw43fFk): simply buying AI licenses for all developers and hoping for the best. It doesn't work.
 
-What I keep seeing is: the tools arrive, and everything else stays the same. Same quarterly planning. Same spec documents that take weeks to write and are outdated by the time engineering starts. Same review processes. Same handoffs between silos.
+The tools arrive and everything else stays the same. Same quarterly planning. Same spec documents that take weeks to write and are outdated by the time engineering starts. Same review processes. Same handoffs between silos.
 
 The code gets written faster. Everything else stays slow. And then people wonder why they're not actually delivering more value.
 
-Or worse: they *do* produce more code, and now there's more to review, more to test, more to maintain, more to debug. The pile grows. The bottleneck downstream gets even more stressed. And upstream? Product and scoping can't keep up either, so teams start building whatever seems reasonable, without clear direction. You're not just shipping slower. You're building the wrong things faster.
+Or worse: they *do* produce more code, and now there's more to review, more to test, more to maintain, more to debug. The pile grows and the bottleneck downstream gets even more stressed. Upstream, product and scoping can't keep up either, so teams start building whatever seems reasonable, without clear direction.
 
 AI accelerates existing patterns, good and bad.
 
-## The uncomfortable part
+## Why coding gets all the attention
 
 I think the reason "AI makes coding faster" gets all the attention is because it's easy to measure and easy to sell. Lines of code per hour. PRs merged per day. Time to first commit.
 

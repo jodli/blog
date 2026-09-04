@@ -20,7 +20,7 @@ One question: is this actually fun to play?
 
 Turns out, our original design wasn't. The core mechanic (army composition only, no per-unit control) didn't create enough depth. One unit type dominated everything. The rock-paper-scissors triangle we'd designed only worked when bots could make decisions every tick, not just pick their army and watch.
 
-That's not a small finding. That's a fundamental design change. If we'd built the real system first, with WASM loading and event infrastructure and the whole thing, we would have discovered this with ten times the code to throw away.
+That's a fundamental design change. If we'd built the real system first, with WASM loading and event infrastructure and the whole thing, we would have discovered this with ten times the code to throw away.
 
 The prototype cost me a weekend. The code went in the trash. The decisions stayed.
 
@@ -30,10 +30,10 @@ This isn't some revelation. "Validate before you build" is older than I am. And 
 
 ![How projects really work](/blog/images/thanks-no-time.png)
 
-At some point when I started dealing with software architecture, I came across this idea: the last responsible moment. I don't have to make every decision upfront. I defer until I have enough information to decide well. Not because I'm avoiding decisions, but because I'm making better ones.
+At some point when I started dealing with software architecture, I came across this idea: the last responsible moment. I don't have to make every decision upfront. I defer until I have enough information to decide well.
 
-A prototype is how I buy that information cheaply. I'm not building the product. I'm answering a question. What's the riskiest assumption? What would hurt the most to get wrong? Build the smallest thing that tests that, and throw it away.
+A prototype is how I buy that information cheaply. I'm answering a question, not building the product. What's the riskiest assumption? What would hurt the most to get wrong? Build the smallest thing that tests that, and throw it away.
 
-And now, with AI, "the smallest thing" got really small. Anyone can vibe-code three variants of an approach in an afternoon and compare them side by side. Put something concrete in front of a stakeholder before anyone writes a spec. Spike a technical direction in hours instead of days. The cost of validating an assumption has never been lower.
+And now, with AI, "the smallest thing" got really small. Anyone can vibe-code three variants of an approach in an afternoon and compare them side by side. Put something concrete in front of a stakeholder before anyone writes a spec. Spike a technical direction in hours instead of days.
 
 Which makes me wonder: if prototyping is this cheap now, why are we still committing to things before we've tested them? Why are we still writing specs instead of building the thing the spec is trying to describe? I don't have a good answer yet. But I'm starting to think the default should be the other way around: prototype first, decide after.
