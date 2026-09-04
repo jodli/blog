@@ -15,7 +15,7 @@ So I had this idea: what if I run a separate AI agent in each repo, and they coo
 
 ## The manual version
 
-I set up a simple test. A todo app, split across three repos. Nothing fancy — the point was to see if the pattern works at all.
+I set up a simple test. A todo app, split across three repos. Nothing fancy, the point was to see if the pattern works at all.
 
 First try: three [Claude Code](https://claude.ai/code) sessions in three terminal windows. One per repo. Me in the middle, copy-pasting between them.
 
@@ -23,23 +23,23 @@ First try: three [Claude Code](https://claude.ai/code) sessions in three termina
 
 I was the message bus.
 
-It felt absurd. But it worked. Each agent had deep context about its repo. They never stepped on each other's code. And the handoffs created natural API contracts — when I told one agent *"the other side returns this shape,"* it just built against that. No ambiguity.
+It felt absurd. But it worked. Each agent had deep context about its repo. They never stepped on each other's code. And the handoffs created natural API contracts: when I told one agent *"the other side returns this shape,"* it just built against that. No ambiguity.
 
 The problem was obvious though: I was the bottleneck. Every message had to go through me.
 
 ## Agent Teams
 
-Claude Code has an experimental feature called [Agent Teams](https://code.claude.com/docs/en/agent-teams). I'd seen it before but never really understood the point — sub-agents already let you delegate work, why would you need a "team"?
+Claude Code has an experimental feature called [Agent Teams](https://code.claude.com/docs/en/agent-teams). I'd seen it before but never really understood the point: sub-agents already let you delegate work, why would you need a "team"?
 
-This was the use case. Sub-agents are fire-and-forget. Agent Teams give you a coordinator that sets up a team, spins up specialized agents, and delegates. The agents can message each other directly — no human relay.
+This was the use case. Sub-agents are fire-and-forget. Agent Teams give you a coordinator that sets up a team, spins up specialized agents, and delegates. The agents can message each other directly, no human relay.
 
-The catch: they're not really persistent either. The team lead spins up agents, they do their work, and when the task list is done, everything shuts down. If you then test the result and come back with "actually, this endpoint should return a list, not an object" — the team is gone. You start from scratch with a new team, new agents, no accumulated context. For a single burst of work it's great. For the back-and-forth of real development, it's [limiting](https://github.com/anthropics/claude-code/issues/23669).
+The catch: they're not really persistent either. The team lead spins up agents, they do their work, and when the task list is done, everything shuts down. If you then test the result and come back with "actually, this endpoint should return a list, not an object", the team is gone. You start from scratch with a new team, new agents, no accumulated context. For a single burst of work it's great. For the back-and-forth of real development, it's [limiting](https://github.com/anthropics/claude-code/issues/23669).
 
 ## What if
 
 What if the agents didn't shut down after the task list is done? What if they just... stayed there, with all the context they built up, ready for the next round of feedback?
 
-What if you could define a team setup once — which repos, which agents, which roles — and spin it up reliably every time instead of hoping the coordinator figures it out?
+What if you could define a team setup once (which repos, which agents, which roles) and spin it up reliably every time instead of hoping the coordinator figures it out?
 
 What if you could scale that to five repos, ten repos, and deploy the same team shape across different projects?
 
